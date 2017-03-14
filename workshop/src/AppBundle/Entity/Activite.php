@@ -248,5 +248,34 @@ class Activite
     {
         return $this->reduction;
     }
-}
 
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Ville",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $ville;
+
+    /**
+     * Set ville
+     *
+     * @param \AppBundle\Entity\Ville $ville
+     *
+     * @return Activite
+     */
+    public function setVille(\AppBundle\Entity\Ville $ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville
+     *
+     * @return \AppBundle\Entity\Ville
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+}

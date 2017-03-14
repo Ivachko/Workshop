@@ -5,12 +5,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Restaurant
+ * Activite
  *
- * @ORM\Table(name="restaurant")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\RestaurantRepository")
+ * @ORM\Table(name="activite")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ActiviteRepository")
  */
-class Restaurant
+class Activite
 {
     /**
      * @var int
@@ -43,11 +43,32 @@ class Restaurant
     private $responsable;
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="Telephone", type="string", length=255)
+     * @ORM\Column(name="Telephone", type="integer")
      */
     private $telephone;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Mail", type="string", length=255)
+     */
+    private $mail;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="Prix_Personne", type="integer")
+     */
+    private $prixPersonne;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="Reduction", type="integer")
+     */
+    private $reduction;
 
 
     /**
@@ -65,7 +86,7 @@ class Restaurant
      *
      * @param string $nom
      *
-     * @return Restaurant
+     * @return Activite
      */
     public function setNom($nom)
     {
@@ -89,7 +110,7 @@ class Restaurant
      *
      * @param string $adresse
      *
-     * @return Restaurant
+     * @return Activite
      */
     public function setAdresse($adresse)
     {
@@ -113,7 +134,7 @@ class Restaurant
      *
      * @param string $responsable
      *
-     * @return Restaurant
+     * @return Activite
      */
     public function setResponsable($responsable)
     {
@@ -135,9 +156,9 @@ class Restaurant
     /**
      * Set telephone
      *
-     * @param string $telephone
+     * @param integer $telephone
      *
-     * @return Restaurant
+     * @return Activite
      */
     public function setTelephone($telephone)
     {
@@ -149,39 +170,89 @@ class Restaurant
     /**
      * Get telephone
      *
-     * @return string
+     * @return int
      */
     public function getTelephone()
     {
         return $this->telephone;
     }
-    /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Ville",cascade={"persist"})
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $ville;
 
     /**
-     * Set ville
+     * Set mail
      *
-     * @param \AppBundle\Entity\Ville $ville
+     * @param string $mail
      *
-     * @return Restaurant
+     * @return Activite
      */
-    public function setVille(\AppBundle\Entity\Ville $ville)
+    public function setMail($mail)
     {
-        $this->ville = $ville;
+        $this->mail = $mail;
 
         return $this;
     }
 
     /**
-     * Get ville
+     * Get mail
      *
-     * @return \AppBundle\Entity\Ville
+     * @return string
      */
-    public function getVille()
+    public function getMail()
     {
-        return $this->ville;
+        return $this->mail;
     }
+
+    /**
+     * Set prixPersonne
+     *
+     * @param integer $prixPersonne
+     *
+     * @return Activite
+     */
+    public function setPrixPersonne($prixPersonne)
+    {
+        $this->prixPersonne = $prixPersonne;
+
+        return $this;
+    }
+
+    /**
+     * Get prixPersonne
+     *
+     * @return int
+     */
+    public function getPrixPersonne()
+    {
+        return $this->prixPersonne;
+    }
+
+    /**
+     * Set reduction
+     *
+     * @param integer $reduction
+     *
+     * @return Activite
+     */
+    public function setReduction($reduction)
+    {
+        $this->reduction = $reduction;
+
+        return $this;
+    }
+
+    /**
+     * Get reduction
+     *
+     * @return int
+     */
+    public function getReduction()
+    {
+        return $this->reduction;
+    }
+
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Ville",cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $ville;
 }
+
