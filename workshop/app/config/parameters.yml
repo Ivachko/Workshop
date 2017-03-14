@@ -2,7 +2,7 @@
 parameters:
     database_host: eu-cdbr-azure-west-d.cloudapp.net
     database_port: 3306
-    database_name: workshop
+    database_name: acsm_63e22ffe894c55d
     database_user: bf60532303c763
     database_password: 70224f84
     mailer_transport: smtp
