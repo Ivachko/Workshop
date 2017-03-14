@@ -1,8 +1,24 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    str
-    {% for item in listVille %}
-        <h1>{{ item.nom }}</h1>
-        <a href="{{ path("editVille",{"id":item.id}) }}">Editer</a>
+    <h1>Ville</h1>
+    <a href="{{ path("ajouterVille") }}">Ajouter une ville</a>
+    <table class="table">
+        <thead>
+        <td>Nom</td>
+        <td>Departement</td>
+        <td>CodePostal</td>
+        <td>Action</td>
+        </thead>
+        <tbody>
+
+        {% for item in listVille %}
+            <tr>
+            <td>{{ item.Nom }}</td>
+            <td>{{ item.Departement }}</td>
+            <td>{{ item.CodePostal }}</td>
+            <td><a href="{{ path("editVille",{"id":item.id}) }}"><span class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></span></a> | <a href="#" class="btn btn-sm btn-danger glyphicon glyphicon-trash"></a></td>
+            </tr>
         {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
