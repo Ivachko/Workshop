@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: eu-cdbr-azure-west-d.cloudapp.net
+    database_port: 3306
+    database_name: workshop
+    database_user: bf60532303c763
+    database_password: 70224f84
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: ThisTokenIsNotSoSecretChangeIt
