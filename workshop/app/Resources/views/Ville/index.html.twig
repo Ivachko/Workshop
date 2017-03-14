@@ -3,5 +3,6 @@
     str
     {% for item in listVille %}
         <h1>{{ item.nom }}</h1>
+        <a href="{{ path("editVille",{"id":item.id}) }}">Editer</a>
         {% endfor %}
 {% endblock %}

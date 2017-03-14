@@ -38,4 +38,26 @@ class VilleController extends Controller
         return $this->render("Ville/new.html.twig",["form"=>$form->createView()]);
 
     }
+    /**
+     * @Route("/Ville/edit/{id}",name="editVille", requirements={
+    "id":"\d+"
+     *  })
+     */
+    public function modifierAction($id, Request $request){
+        $em= $this->getDoctrine()->getEntityManager();
+
+        $ville=$em->getRepository("AppBundle:Ville")
+            ->find($id);
+        if ($ville==null){
+            throw new NotFoundHttpException("La Ville n'existe pas");
+        }
+        $formulaire= $this->createForm(\AppBundle\Form\VilleType::class,$ville);
+        if ($formulaire->handleRequest($request)->isValid()){
+            $em->persist($ville);
+            $em->flush();
+            $this->addFlash('notice',"La Ville ".$ville->getNom()." a bien été modifée.");
+            return $this->redirectToRoute("indexVille");
+        }
+        return $this->render("Ville/edit.html.twig",["formulaire"=>$formulaire->createView()]);
+    }
 }
