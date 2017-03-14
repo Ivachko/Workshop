@@ -3,6 +3,8 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
+
 
 /**
  * Users
@@ -10,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="users")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UsersRepository")
  */
-class Users
+class Users extends BaseUser
 {
     /**
      * @var int
@@ -19,7 +21,7 @@ class Users
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
@@ -38,13 +40,6 @@ class Users
     /**
      * @var string
      *
-     * @ORM\Column(name="Email", type="string", length=255)
-     */
-    private $email;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="Tel", type="string", length=255)
      */
     private $tel;
@@ -56,17 +51,11 @@ class Users
      */
     private $adresse;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Password", type="string", length=255)
-     */
-    private $password;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="UrlPhoto", type="string", length=255)
+     * @ORM\Column(name="UrlPhoto", type="string", length=255, nullable=true)
      */
     private $urlPhoto;
 
