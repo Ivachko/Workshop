@@ -1,7 +1,20 @@
-{% extends "::base.html.twig" %}
-
-{% block title %}AppBundle:PackController:index{% endblock %}
-
+{% extends '::base.html.twig' %}
 {% block body %}
-<h1>Welcome to the PackController:index page</h1>
+    <a href="{{ path("ajouterPack") }}">Ajouter Pack d'activite</a>
+    <table class="table">
+
+        <th>Nom</th>
+
+        <th>Action</th>
+
+
+        {% for item in listPackActivite %}
+            <tr>
+                <td>{{ item.Nom }}</td>
+                <td><a href={{ path("editPack",{"id":item.id}) }}><span class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></span></a> | <a href="#" class="btn btn-sm btn-danger glyphicon glyphicon-trash"></a></td>
+
+            </tr>
+        {% endfor %}
+
+    </table>
 {% endblock %}
