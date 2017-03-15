@@ -1,0 +1,20 @@
+{% extends "::base.html.twig" %}
+{% block body %}
+    <a href="{{ path("ajouterActivite") }}"></a>
+    <table class="table">
+
+        <th>Nom</th>
+
+        <th>Action</th>
+
+
+        {% for item in listActivite %}
+            <tr>
+                <td>{{ item.Nom }}</td>
+                <td><a href="{{ path("editActivite",{"id":item.id}) }}"><span class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></span></a> | <a href="{{ path("delActivite",{"id":item.id}) }}" class="btn btn-sm btn-danger glyphicon glyphicon-trash"></a></td>
+
+            </tr>
+        {% endfor %}
+
+    </table>
+{% endblock %}

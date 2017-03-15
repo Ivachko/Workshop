@@ -40,7 +40,7 @@ class VilleController extends Controller
     }
     /**
      * @Route("/Ville/edit/{id}",name="editVille", requirements={
-    "id":"\d+"
+     * "id":"\d+"
      *  })
      */
     public function modifierAction($id, Request $request){
@@ -59,5 +59,26 @@ class VilleController extends Controller
             return $this->redirectToRoute("indexVille");
         }
         return $this->render("Ville/edit.html.twig",["formulaire"=>$formulaire->createView()]);
+
+    }
+
+    /**
+     * @Route("/Ville/del/{id}",name="delVille", requirements={
+     * "id":"\d+"
+     *  })
+     */
+    public function delAction($id,Request $request){
+        $em= $this->getDoctrine()->getEntityManager();
+
+        $ville=$em->getRepository("AppBundle:Ville")
+            ->find($id);
+        if ($ville==null){
+            throw new NotFoundHttpException("La Ville n'existe pas");
+        }
+            $em->remove($ville);
+            $em->flush();
+            return $this->redirectToRoute("indexVille");
+
+
     }
 }
