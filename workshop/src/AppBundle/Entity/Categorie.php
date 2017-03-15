@@ -62,50 +62,5 @@ class Categorie
     {
         return $this->nom;
     }
-    /**
-     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Activite",cascade={"persist"})
-     *
-     */
-    private $activites;
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->activites = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
-    /**
-     * Add activite
-     *
-     * @param \AppBundle\Entity\Activite $activite
-     *
-     * @return Categorie
-     */
-    public function addActivite(\AppBundle\Entity\Activite $activite)
-    {
-        $this->activites[] = $activite;
-
-        return $this;
-    }
-
-    /**
-     * Remove activite
-     *
-     * @param \AppBundle\Entity\Activite $activite
-     */
-    public function removeActivite(\AppBundle\Entity\Activite $activite)
-    {
-        $this->activites->removeElement($activite);
-    }
-
-    /**
-     * Get activites
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getActivites()
-    {
-        return $this->activites;
-    }
 }

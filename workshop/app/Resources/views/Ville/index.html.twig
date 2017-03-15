@@ -16,7 +16,7 @@
             <td>{{ item.Nom }}</td>
             <td>{{ item.Departement }}</td>
             <td>{{ item.CodePostal }}</td>
-            <td><a href="{{ path("editVille",{"id":item.id}) }}"><span class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></span></a> | <a href="#" class="btn btn-sm btn-danger glyphicon glyphicon-trash"></a></td>
+            <td><a href="{{ path("editVille",{"id":item.id}) }}"><span class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></span></a> | <a href="{{ path("delVille",{"id":item.id}) }}" class="btn btn-sm btn-danger glyphicon glyphicon-trash"></a></td>
             </tr>
         {% endfor %}
         </tbody>

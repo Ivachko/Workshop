@@ -278,4 +278,51 @@ class Activite
     {
         return $this->ville;
     }
+
+    /**
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Categorie",cascade={"persist"})
+     *
+     */
+    private $categories;
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->categories = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add category
+     *
+     * @param \AppBundle\Entity\Categorie $category
+     *
+     * @return Activite
+     */
+    public function addCategory(\AppBundle\Entity\Categorie $category)
+    {
+        $this->categories[] = $category;
+
+        return $this;
+    }
+
+    /**
+     * Remove category
+     *
+     * @param \AppBundle\Entity\Categorie $category
+     */
+    public function removeCategory(\AppBundle\Entity\Categorie $category)
+    {
+        $this->categories->removeElement($category);
+    }
+
+    /**
+     * Get categories
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
 }
