@@ -33,7 +33,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="{{ path("homepage") }}">Acceuil</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Restaurants</a></li>
                     <li><a href="#">Evenements</a></li>
@@ -45,8 +45,8 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connexion / Inscription <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/Workshop/workshop/web/app_dev.php/login">Connexion</a></li>
-                            <li><a href="/Workshop/workshop/web/app_dev.php/register">Inscription</a></li>
+                            <li><a href="{{ path("fos_user_security_login") }}">Connexion</a></li>
+                            <li><a href="{{ path("fos_user_registration_register")}}">Inscription</a></li>
 
                         </ul>
                     </li>
@@ -54,9 +54,8 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <!--<img src="{{ asset('img/top.png') }}" alt="" height="500px">-->
-    <hr>
-    <div class="container">
+
+
     <!--<div class="jumbotron">
         <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam, error expedita illo, mollitia perferendis perspiciatis reiciendis sed soluta tempore tenetur voluptate voluptatibus, voluptatum! Accusantium ad cum itaque. Cumque, temporibus?</span><span>Aspernatur facilis illo necessitatibus quae ullam voluptas! Amet assumenda culpa earum explicabo ipsa iusto necessitatibus quia, vel! Eveniet, possimus, quaerat. Ab accusamus culpa dolorum esse explicabo non nostrum officiis, sed.</span></p>
         <a href="#" class="btn btn-primary">Je commence</a>
@@ -64,7 +63,14 @@
 
             {% block body %}{% endblock %}
 
+    <header>
+        <hr>
+        <div class="container">
+            <div class="row">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores corporis earum explicabo impedit perspiciatis similique vitae. Aliquid assumenda dolorem dolores dolorum perspiciatis qui repellat sunt vel! Eos explicabo illo ut.</p>
+            </div>
         </div>
+    </header>
     </body>
 
 

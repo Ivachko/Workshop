@@ -18,4 +18,13 @@ class DefaultController extends Controller
             'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
         ]);
     }
+
+    /**
+     * @Route("/Restaurant/list",name="listRestaurant")
+     */
+    public function restaurantAction(){
+        $em = $this->getDoctrine()->getEntityManager()->getRepository("AppBundle:Restaurant");
+        $s= $em->findAll();
+        return $this->render("Default/resindex.html.twig",['listRestaurant' => $s]);
+    }
 }
