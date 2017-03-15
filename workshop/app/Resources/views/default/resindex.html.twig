@@ -1,26 +1,11 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    
-    <a href="{{ path("ajouterRestaurant") }}">Ajouter restaurant</a>
-    <table class="table">
+    <div class="container">
+      {%   for item in listRestaurant %}
+        <h1>{{ item.Nom }}</h1>
+          <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ex, incidunt laudantium magni neque omnis provident quis quo quod recusandae reiciendis sunt tenetur ullam? Cupiditate est molestias nostrum placeat qui!</span><span>Assumenda cupiditate eos iusto magni odit quia quos rerum soluta ullam voluptatem. Aut dicta ex explicabo harum, labore nobis odio omnis rem saepe veniam! Aliquam exercitationem itaque nesciunt pariatur ratione!</span></p>
+          <a href="{{ path('reserverRestaurant',{'nom':item.Nom}) }}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> Reserver ce restaurant</a>
+      {%  endfor %}
+    </div>
 
-        <th>Nom</th>
-        <th>Adresse</th>
-        <th>Ville</th>
-        <th>Responsable</th>
-        <th>Action</th>
-
-
-        {% for item in listRestaurant %}
-            <tr>
-                <td>{{ item.Nom }}</td>
-                <td>{{ item.Adresse }}</td>
-                <td>{{ item.Ville.Nom }}</td>
-                <td>{{ item.Responsable }}</td>
-                <td><a href="{{ path("editRestaurant",{"id":item.id}) }}"><span class="btn btn-sm btn-primary glyphicon glyphicon-pencil"></span></a> | <a href="{{ path("delRestaurant",{"id":item.id}) }}" class="btn btn-sm btn-danger glyphicon glyphicon-trash"></a></td>
-
-            </tr>
-        {% endfor %}
-
-    </table>
 {% endblock %}

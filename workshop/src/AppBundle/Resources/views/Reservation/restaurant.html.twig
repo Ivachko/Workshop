@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <h1>{{ rest.Nom }}</h1>
+            <p>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda consectetur culpa cupiditate debitis, doloremque eveniet inventore ipsam magni nemo obcaecati, optio ratione sit, suscipit temporibus vero voluptas! Earum, nihil.</span><span>Accusamus cupiditate debitis deserunt et eveniet expedita iste laboriosam libero mollitia odio, omnis placeat provident, quis quisquam ratione sit ut veritatis voluptas? Atque consectetur consequuntur illo laborum molestiae reiciendis totam!</span><span>Aliquam deleniti doloremque hic, maxime nisi obcaecati perspiciatis repudiandae! Accusamus itaque laborum nam quibusdam tempore. A aliquam aperiam architecto cum ea expedita quidem ratione, sunt temporibus ut. Laudantium, nemo, possimus.</span><span>Accusantium at commodi debitis dignissimos eligendi eos error fuga nam necessitatibus nihil nulla obcaecati, officia optio quae quam, quibusdam ratione rem reprehenderit repudiandae similique suscipit unde ut, vero. Ea, error?</span><span>Accusantium aliquid amet aspernatur assumenda debitis delectus deleniti dicta dolorem explicabo facilis incidunt maiores, natus nemo nisi nobis omnis, repellat reprehenderit sed veniam vero? Aliquam aspernatur doloremque excepturi modi qui.</span>
+            </p>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <blockquote>
+                    <p>Adresse : <i>{{ rest.Adresse }}</i></p>
+                    <footer>{{ rest.Ville.codePostal }} {{ rest.Ville.nom }}</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-5">
+                <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-screenshot"></span> Emmenez moi</a>
+                <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-earphone"></span> {{ rest.Telephone }}</a>
+                <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-cutlery"></span> Reservez !</a>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}
