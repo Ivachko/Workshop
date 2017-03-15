@@ -25,4 +25,12 @@ class ReservationController extends Controller
 
            return $this->render('@App/Reservation/restaurant.html.twig',['rest'=>$restaurant]);
     }
+
+    /**
+     * @Route("/Reservation/{id}",name="ReserverRestaurant")
+     * @param $id
+     */
+    public function reserverRestaurantAction($id){
+        return "lol";
+    }
 }
