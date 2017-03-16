@@ -30,4 +30,15 @@
 
         {% endfor %}
     </div>
+    <div class="row">
+        <h2>Reservation des Pack Activite <span class="badge">{{ reservationPack|length }}    </span></h2>
+        {% for item in reservationPack  %}
+                    {{ dump(item.activites) }}
+        {% endfor %}
+
+
+
+
+    </div>
+
 </div>

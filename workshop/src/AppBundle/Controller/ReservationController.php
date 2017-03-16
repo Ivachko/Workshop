@@ -115,7 +115,7 @@ class ReservationController extends Controller
             $em= $this->getDoctrine()->getManager();
             $pack=$em->getRepository("AppBundle:Pack_Activite")
                 ->find($id);
-            $reservation->setActvite($pack);
+            $reservation->setPackActvite($pack);
             $reservation->setUser($user);
             $em->persist($reservation);
             $em->flush();
