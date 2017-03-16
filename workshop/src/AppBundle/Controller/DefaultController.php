@@ -27,20 +27,4 @@ class DefaultController extends Controller
         $s= $em->findAll();
         return $this->render("Default/resindex.html.twig",['listRestaurant' => $s]);
     }
-    /**
-     * @Route("/Activite/list",name="listActivite")
-     */
-    public function activiteAction(){
-        $em = $this->getDoctrine()->getEntityManager()->getRepository("AppBundle:Activite");
-        $s= $em->findAll();
-        return $this->render("Default/actindex.html.twig",['listRestaurant' => $s]);
-    }
-    /**
-     * @Route("/Pack/list",name="listPack")
-     */
-    public function packAction(){
-        $em = $this->getDoctrine()->getEntityManager()->getRepository("AppBundle:Pack_Activite");
-        $s= $em->findAll();
-        return $this->render("Default/packindex.html.twig",['listPack' => $s]);
-    }
 }

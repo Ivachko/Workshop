@@ -67,7 +67,7 @@ class Pack_Activite
      * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Activite",cascade={"persist"})
      *
      */
-    private $activites;
+    private $activites  ;
     /**
      * Constructor
      */
