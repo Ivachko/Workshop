@@ -5,6 +5,7 @@
             <h1>{{ item.Nom }}</h1>
             <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ex, incidunt laudantium magni neque omnis provident quis quo quod recusandae reiciendis sunt tenetur ullam? Cupiditate est molestias nostrum placeat qui!</span><span>Assumenda cupiditate eos iusto magni odit quia quos rerum soluta ullam voluptatem. Aut dicta ex explicabo harum, labore nobis odio omnis rem saepe veniam! Aliquam exercitationem itaque nesciunt pariatur ratione!</span></p>
             <a href="{{ path('reservationActivite',{'nom':item.Nom}) }}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> Reserver cette activite</a>
+
         {%  endfor %}
     </div>
 

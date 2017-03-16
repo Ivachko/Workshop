@@ -89,4 +89,40 @@ class ReservationController extends Controller
         return $this->render("@App/Reservation/reservactivite.html.twig",["form"=>$form->createView()]);
 
     }
+    /**
+     * @Route("/Reservation/pack-{nom}",name="reservationPack")
+     */
+    public function  packAction($nom,Request $request){
+        $em= $this->getDoctrine()->getEntityManager();
+        $pack=$em->getRepository("AppBundle:Pack_Activite")
+            ->findOneBy(['nom'=>$nom]);
+
+
+        return $this->render('@App/Reservation/pack.html.twig',['pack'=>$pack]);
+    }
+
+
+    /**
+     * @Route("/Reservation/pack/{id}",name="ReserverPack")
+     * @param $id
+     */
+    public function reserverpack($id,Request $request){
+        $user = $this->getUser();
+
+        $reservation= new Reservation();
+        $form= $this->createForm(\AppBundle\Form\ReservationType::class,$reservation);
+        if($form->handleRequest($request)->isValid()){
+            $em= $this->getDoctrine()->getManager();
+            $pack=$em->getRepository("AppBundle:Pack_Activite")
+                ->find($id);
+            $reservation->setActvite($pack);
+            $reservation->setUser($user);
+            $em->persist($reservation);
+            $em->flush();
+            $this->addFlash('Success','Reservation bien pris en cours add');
+            return $this->redirectToRoute("homepage");
+        }
+        return $this->render("@App/Reservation/reservpack.html.twig",["form"=>$form->createView()]);
+
+    }
 }
