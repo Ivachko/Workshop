@@ -69,7 +69,16 @@ class Activite
      * @ORM\Column(name="Reduction", type="integer")
      */
     private $reduction;
-
+    /**
+     * @var string
+     * @ORM\Column(name="UrlPhoto",type="string",length=255)
+     */
+    private $urlphoto;
+    /**
+     * @var text
+     * @ORM\Column(name="Description",type="text")
+     */
+    private $description;
 
     /**
      * Get id
@@ -324,5 +333,53 @@ class Activite
     public function getCategories()
     {
         return $this->categories;
+    }
+
+    /**
+     * Set urlphoto
+     *
+     * @param string $urlphoto
+     *
+     * @return Activite
+     */
+    public function setUrlphoto($urlphoto)
+    {
+        $this->urlphoto = $urlphoto;
+    
+        return $this;
+    }
+
+    /**
+     * Get urlphoto
+     *
+     * @return string
+     */
+    public function getUrlphoto()
+    {
+        return $this->urlphoto;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Activite
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }

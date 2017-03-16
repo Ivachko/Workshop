@@ -27,4 +27,18 @@ class DefaultController extends Controller
         $s= $em->findAll();
         return $this->render("Default/resindex.html.twig",['listRestaurant' => $s]);
     }
+    /**
+     * @Route("/Activite/list",name="listActivite")
+     */
+    public function activiteAction(){
+        $em = $this->getDoctrine()->getEntityManager()->getRepository("AppBundle:Activite");
+        $s= $em->findAll();
+        return $this->render("Default/actindex.html.twig",['listActivite' => $s]);
+    }
+    /**
+     * @Route("/Contact",name="contact")
+     */
+    public function contactAction(){
+        return $this->render("Default/contact.html.twig");
+    }
 }

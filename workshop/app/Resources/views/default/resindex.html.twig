@@ -101,10 +101,11 @@
                     <div class="col-sm-4 col-xs-12">
                         <figure class="wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="1100ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 1100ms;">
                             <div class="img-wrapper">
-                                <img src="{{ asset('images/leresto.png') }}" class="img-responsive" alt="">
+                                    
+                                <img src="{{ item.Urlphoto }}" class="img-responsive" alt="">
                                 <div class="overlay">
                                     <div class="buttons">
-                                        <a rel="gallery" class="fancybox" href="produit6.html">Réserver</a>
+                                        <a rel="gallery" class="fancybox" href="{{ path('reserverRestaurant',{'nom':item.nom}) }}">Réserver</a>
                                     </div>
                                 </div>
                             </div>

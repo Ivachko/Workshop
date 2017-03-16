@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<section class="global-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2>Contactez-nous !</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href=" {{ path('homepage') }}">
+                                <i class="ion-ios-home"></i>
+                                Accueil
+                            </a>
+                        </li>
+
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="block">
+                    <h2 class="subtitle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay=".3s" style="visibility: visible; animation-duration: 500ms; animation-delay: 0.3s; animation-name: fadeInDown;">Contact</h2>
+                    <p class="subtitle-des wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay=".5s" style="visibility: visible; animation-duration: 500ms; animation-delay: 0.5s; animation-name: fadeInDown;">
+                        N'hésitez pas à nous contacter pour toute demande d'information supplémentaire.
+                    </p>
+                    <div class="contact-form">
+                        <form id="contact-form" method="post" action="sendmail.php" role="form">
+
+                            <div class="form-group wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay=".6s" style="visibility: visible; animation-duration: 500ms; animation-delay: 0.6s; animation-name: fadeInDown;">
+                                <input type="text" placeholder="Prenom" class="form-control" name="name" id="name">
+                            </div>
+
+
+                            <div class="form-group wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay=".8s" style="visibility: visible; animation-duration: 500ms; animation-delay: 0.8s; animation-name: fadeInDown;">
+                                <input type="email" placeholder="Nom" class="form-control" name="email" id="email">
+                            </div>
+
+
+                            <div class="form-group wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay=".8s" style="visibility: visible; animation-duration: 500ms; animation-delay: 0.8s; animation-name: fadeInDown;">
+                                <input type="email" placeholder=" Email" class="form-control" name="email" id="email">
+                            </div>
+
+
+                            <div class="form-group wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="1s" style="visibility: visible; animation-duration: 500ms; animation-delay: 1s; animation-name: fadeInDown;">
+                                <input type="text" placeholder="Sujet" class="form-control" name="" id="subject">
+                            </div>
+
+                            <div class="form-group wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="1s" style="visibility: visible; animation-duration: 500ms; animation-delay: 1s; animation-name: fadeInDown;">
+                                <textarea type="textaera" placeholder="Text" class="form-control" name="" id="subject"></textarea>
+                            </div>
+
+
+                            <div id="submit" class="wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay="1.4s" style="visibility: visible; animation-duration: 500ms; animation-delay: 1.4s; animation-name: fadeInDown;">
+                                <input type="submit" id="contact-submit" class="btn btn-default btn-send" value="Envoyer le message">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+            <!--
+            ==================================================
+                Footer Section Start
+            ================================================== -->
+            <footer id="footer">
+                <div class="container">
+                    <div class="col-md-8">
+                        <p class="copyright">Tous droits réservés-Ke-Groupe<span>2017</span> . Made with <span class="fa fa-heart" aria-hidden="true"></span> by <a href="http://www.wis-ecoles.com/Campus/Nantes" target="_blank">Agence 2.7.0 (WIS-EPSI) Nantes</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Social Media -->
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="Facebook">
+                                    <i class="ion-social-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="Twitter">
+                                    <i class="ion-social-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="Linkedin">
+                                    <i class="ion-social-linkedin"></i>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </footer> <!-- /#footer -->
+
+
+
+
+
+        </div></div></section>
+    {% endblock %}

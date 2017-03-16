@@ -49,12 +49,22 @@ class Restaurant
      */
     private $telephone;
 
-
+    /**
+     * @var string
+     * @ORM\Column(name="UrlPhoto",type="string",length=255)
+     */
+    private $urlphoto;
+    /**
+     * @var text
+     * @ORM\Column(name="Description",type="text")
+     */
+    private $description;
     /**
      * Get id
      *
      * @return int
      */
+
     public function getId()
     {
         return $this->id;
@@ -183,5 +193,53 @@ class Restaurant
     public function getVille()
     {
         return $this->ville;
+    }
+
+    /**
+     * Set urlphoto
+     *
+     * @param string $urlphoto
+     *
+     * @return Restaurant
+     */
+    public function setUrlphoto($urlphoto)
+    {
+        $this->urlphoto = $urlphoto;
+    
+        return $this;
+    }
+
+    /**
+     * Get urlphoto
+     *
+     * @return string
+     */
+    public function getUrlphoto()
+    {
+        return $this->urlphoto;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Restaurant
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 }

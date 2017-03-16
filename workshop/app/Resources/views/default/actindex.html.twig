@@ -1,12 +1,119 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <div class="container">
-        {%   for item in listRestaurant %}
-            <h1>{{ item.Nom }}</h1>
-            <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ex, incidunt laudantium magni neque omnis provident quis quo quod recusandae reiciendis sunt tenetur ullam? Cupiditate est molestias nostrum placeat qui!</span><span>Assumenda cupiditate eos iusto magni odit quia quos rerum soluta ullam voluptatem. Aut dicta ex explicabo harum, labore nobis odio omnis rem saepe veniam! Aliquam exercitationem itaque nesciunt pariatur ratione!</span></p>
-            <a href="{{ path('reservationActivite',{'nom':item.Nom}) }}" class="btn btn-sm btn-success"><span class="glyphicon glyphicon-ok"></span> Reserver cette activite</a>
+    <section class="global-page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h1> <u>Nos activités inédites</u></h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <h3>Réservez dès maintenant nos activités pour vivre des expériences incroyables uniquement disponible sur notre plateforme.</h3>
 
-        {%  endfor %}
-    </div>
+                            </li>
+
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-12">
+                    <figure class="wow fadeInLeft animated portfolio-item animated animated" data-wow-duration="500ms" data-wow-delay="0ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
+                        <div class="img-wrapper">
+                            <img src="{{ asset('images/blog/cata3.jpg') }}" class="img-responsive" alt="this is a title">
+                            <div class="overlay">
+                                <div class="buttons">
+                                    <a rel="gallery" class="fancybox" href="catacombes.html">Réserver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <figure class="wow fadeInLeft animated animated animated" data-wow-duration="500ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 300ms; animation-name: fadeInLeft;">
+                        <div class="img-wrapper">
+                            <img src="{{ asset('images/blog/seine3.jpg') }}" class="img-responsive" alt="this is a title">
+                            <div class="overlay">
+                                <div class="buttons">
+                                    <a rel="gallery" class="fancybox" href="Croisiere-Seine.html">Réserver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <figure class="wow fadeInLeft animated animated animated" data-wow-duration="500ms" data-wow-delay="500ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 500ms; animation-name: fadeInLeft;">
+                        <div class="img-wrapper">
+                            <img src="{{ asset('images/blog/escape3.jpg') }}" class="img-responsive" alt="">
+                            <div class="overlay">
+                                <div class="buttons">
+                                    <a rel="gallery" class="fancybox" href="Escape-game.html">Réserver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <figure class="wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="700ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 700ms;">
+                        <div class="img-wrapper">
+                            <img src="{{ asset('images/blog/notredame3.jpg') }}" class="img-responsive" alt="">
+                            <div class="overlay">
+                                <div class="buttons">
+                                    <a rel="gallery" class="fancybox" href="Notre-Dame-Paris.html">Réserver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <figure class="wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="900ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 900ms;">
+                        <div class="img-wrapper">
+                            <img src="{{ asset('images/blog/opera3.jpg') }}" class="img-responsive" alt="">
+                            <div class="overlay">
+                                <div class="buttons">
+                                    <a rel="gallery" class="fancybox" href="Opera.html">Réserver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-sm-4 col-xs-12">
+                    <figure class="wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="1100ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 1100ms;">
+                        <div class="img-wrapper">
+                            <img src="{{ asset('images/blog/spa3.jpg') }}" class="img-responsive" alt="">
+                            <div class="overlay">
+                                <div class="buttons">
+                                    <a rel="gallery" class="fancybox" href="Spa-noir.html">Réserver</a>
+                                </div>
+                            </div>
+                        </div>
+                    </figure>
+                </div>
+
+
+                    {%   for item in listActivite %}
+
+                        <div class="col-sm-4 col-xs-12">
+                            <figure class="wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="1100ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 1100ms;">
+                                <div class="img-wrapper">
+                                    <img src="{{ item.Urlphoto}}" class="img-responsive" alt="">
+                                    <div class="overlay">
+                                        <div class="buttons">
+                                            <a rel="gallery" class="fancybox" href="Spa-noir.html">Réserver</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </figure>
+                        </div>
+                    {%  endfor %}
+                </div>
+
+        </div>
+    </section>
+
 
 {% endblock %}

@@ -49,12 +49,22 @@ class Restaurant
      */
     private $telephone;
 
-
+    /**
+     * @var string
+     * @ORM\Column(name="UrlPhoto",type="string",length=255)
+     */
+    private $urlphoto;
+    /**
+     * @var text
+     * @ORM\Column(name="Description",type="text")
+     */
+    private $description;
     /**
      * Get id
      *
      * @return int
      */
+
     public function getId()
     {
         return $this->id;
@@ -160,5 +170,28 @@ class Restaurant
      * @ORM\JoinColumn(nullable=false)
      */
     private $ville;
-}
 
+    /**
+     * Set ville
+     *
+     * @param \AppBundle\Entity\Ville $ville
+     *
+     * @return Restaurant
+     */
+    public function setVille(\AppBundle\Entity\Ville $ville)
+    {
+        $this->ville = $ville;
+
+        return $this;
+    }
+
+    /**
+     * Get ville
+     *
+     * @return \AppBundle\Entity\Ville
+     */
+    public function getVille()
+    {
+        return $this->ville;
+    }
+}
