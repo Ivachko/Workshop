@@ -1,26 +1,95 @@
 {% extends 'base.html.twig' %}
 {% block body %}
+    <section class="global-page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block">
+                        <h1> <u>Découvrez {{ rest.Nom }}</u></h1>
+                        <div class="portfolio-meta">
+
+
+                            <span> <h3> Faites votre réservation.</h3></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <div class="container">
-        <div class="row">
-            <h1>{{ rest.Nom }}</h1>
-            <p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda consectetur culpa cupiditate debitis, doloremque eveniet inventore ipsam magni nemo obcaecati, optio ratione sit, suscipit temporibus vero voluptas! Earum, nihil.</span><span>Accusamus cupiditate debitis deserunt et eveniet expedita iste laboriosam libero mollitia odio, omnis placeat provident, quis quisquam ratione sit ut veritatis voluptas? Atque consectetur consequuntur illo laborum molestiae reiciendis totam!</span><span>Aliquam deleniti doloremque hic, maxime nisi obcaecati perspiciatis repudiandae! Accusamus itaque laborum nam quibusdam tempore. A aliquam aperiam architecto cum ea expedita quidem ratione, sunt temporibus ut. Laudantium, nemo, possimus.</span><span>Accusantium at commodi debitis dignissimos eligendi eos error fuga nam necessitatibus nihil nulla obcaecati, officia optio quae quam, quibusdam ratione rem reprehenderit repudiandae similique suscipit unde ut, vero. Ea, error?</span><span>Accusantium aliquid amet aspernatur assumenda debitis delectus deleniti dicta dolorem explicabo facilis incidunt maiores, natus nemo nisi nobis omnis, repellat reprehenderit sed veniam vero? Aliquam aspernatur doloremque excepturi modi qui.</span>
-            </p>
-        </div>
-        <div class="row">
-            <div class="col-md-5">
+        <div class="col-md-12">
+            <div class="post-img">
+                <img class="img-responsive" alt="" src="images/blog/shang2.jpg">
+            </div>
+            <div class="post-content">
+                <h3>
+                   {{ rest.Nom }}
+                </h3>
+                <br>
+                <br>
                 <blockquote>
-                    <p>Adresse : <i>{{ rest.Adresse }}</i></p>
-                    <footer>{{ rest.Ville.codePostal }} {{ rest.Ville.nom }}</footer>
+                    {{ rest.Description }}
                 </blockquote>
-            </div>
-            <div class="col-md-5">
-                <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-screenshot"></span> Emmenez moi</a>
-                <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-earphone"></span> {{ rest.Telephone }}</a>
-                <a href="{{ path("ReserverActivite",{'id':rest.Id}) }}" class="btn btn-default"><span class="glyphicon glyphicon-cutlery"></span> Reservez !</a>
+                <p>
+                    <b>Réservez dès maintenant une table pour vous et vos proches, et dégustez un sublime repas.</b>
+
+                </p><p>
+                    <i>
+                        Restaurant disponible à la réservation en ligne uniquement sur notre plateforme !
+                    </i>
+                </p>
             </div>
 
+            <!--end media-->
+
+            <div class="post-comment">
+                <h3>Je réserve:</h3>
+                <form role="form" class="form-horizontal col-lg-12">
+                    <div class="form-group col-lg-5">
+                        <div class="col-lg-12">
+                            <input type="datetime-local" class="col-lg-12 form-control" placeholder="Date">
+
+
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="number" class="col-lg-12 form-control" placeholder="Nombre de personne">
+                        </div>
+
+
+
+
+
+
+                        <div class="col-lg-12">
+                            <input type="text" class="col-lg-12 form-control" placeholder="Numéro de carte bleu">
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="text" class="col-lg-12 form-control" placeholder="Cryptogramme">
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="text" class="col-lg-12 form-control" placeholder="Date de validité">
+                        </div>
+
+
+
+
+                    </div>
+
+
+                </form>
+                <div>
+                    <p>
+
+                        <button class="btn btn-send" type="submit"><span class="fa fa-credit-card-alt" aria-hidden="true"></span> Je paye</button>
+                    </p>
+
+                    <p>
+                        <button class="btn btn-send" type="submit"><span class="fa fa-car" aria-hidden="true"></span> Commander un chauffeur</button>
+                    </p>
+                </div>
+            </div>
 
         </div>
+
     </div>
 {% endblock %}
