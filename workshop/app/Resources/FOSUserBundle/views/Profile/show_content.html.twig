@@ -2,16 +2,32 @@
 <div class="container">
 <div class="fos_user_user_show">
     <h1>Bonjour, {{ user.username }}</h1>
-
+</div>
 <div class="row">
-    <h2>Reservation des restaurants <span class="badge">{{ reservation|length }}    </span></h2>
-    {% for item in reservation %}
+    <h2>Reservation des restaurants <span class="badge">{{ reservationResto|length }}    </span></h2>
+    {% for item in reservationResto %}
+
         <h1>{{ item.restaurant.nom }}</h1>
         <blockquote>
             <p>RDV le : {{ item.date | date('d/m/y à h:i') }}</p>
             <footer>Adresse : {{ item.restaurant.adresse }} | {{ item.restaurant.ville.nom }} {{ item.restaurant.ville.codepostal }}</footer>
         </blockquote>
         <a href="" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-trash"></span> Annuler reservation</a>
+
     {% endfor %}
 </div>
+    <div class="row">
+        <h2>Reservation des Activite <span class="badge">{{ reservationActivite|length }}    </span></h2>
+        {% for item in reservationActivite %}
+
+                <h1>{{ item.actvite.nom }}</h1>
+                <blockquote>
+                    <p>RDV le : {{ item.date | date('d/m/y à h:i') }}</p>
+                    <footer>Adresse : {{ item.actvite.adresse }} | {{ item.actvite.ville.nom }} {{ item.actvite.ville.codepostal }}</footer>
+                </blockquote>
+                <a href="" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-trash"></span> Annuler reservation</a>
+
+
+        {% endfor %}
+    </div>
 </div>
