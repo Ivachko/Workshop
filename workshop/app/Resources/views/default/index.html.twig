@@ -1,60 +1,254 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
- <div class="container">
-     <div class="jumbotron">
-         <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, fugit, sint? Aliquam, pariatur, placeat. </h3>
-         <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto, assumenda beatae dicta, ea
-             earum eos ex facere iusto maxime molestiae repellendus voluptas. Atque molestiae non possimus quaerat tenetur
-             totam.
-         </div>
-         <div>Accusantium asperiores blanditiis dolorem eveniet exercitationem, labore laudantium nobis nulla obcaecati
-             quaerat quas, quia quod reiciendis totam velit vero, voluptas voluptatibus. Culpa delectus deserunt eaque eum
-             expedita modi quo, vero?
-         </div>
-         <div>Alias assumenda at consequatur culpa cumque dolorum eos error et, eveniet incidunt iusto, nam numquam porro
-             quam quas, quia quod ratione repellendus saepe suscipit tempore totam vel veniam veritatis voluptas.
-         </div>
-         <a href="" class="btn btn-success">
-             Voir plus
-         </a>
+    <section id="hero-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="block wow fadeInUp animated" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
 
-     </div>
-</div>
+                        <!-- Slider -->
+                        <section class="cd-intro">
+                            <h1 class="wow fadeInUp animated cd-headline slide animated" data-wow-delay=".4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                                <span>La plateforme de services touristiques !</span><br>
+                                <span class="cd-words-wrapper" style="width: 366px;">
+                                    <b class="is-hidden">RESTAURANTS</b>
+                                    <b class="is-visible">CHAUFFEURS VTC</b>
+                                    <b class="is-hidden">ACTIVITES</b>
+                                </span>
+                            </h1>
+                        </section> <!-- cd-intro -->
+                        <!-- /.slider -->
+                        <h2 class="wow fadeInUp animated animated" data-wow-delay=".6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">
+                            Réservez dès maintenant des activités inédites pour voyage en France. <br>Nos chauffeurs vous emmènes où vous voulez.
+                        </h2>
+                        <a class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green animated" data-wow-delay=".9s" href="restaurants.html" data-section="#works" style="visibility: visible; animation-delay: 0.9s; animation-name: fadeInUp;"> <b>Je réserve ! </b> </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <<section id="works" class="works">
     <div class="container">
-
+        <div class="section-heading">
+        </div>
         <div class="row">
-            <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
-                    <img src="http://lorempicsum.com/rio/350/200/1" alt="...">
-                </a>
+            <div class="col-sm-4 col-xs-12">
+                <figure class="wow fadeInLeft animated portfolio-item animated" data-wow-duration="500ms" data-wow-delay="0ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
+                    <div class="img-wrapper">
+                        <img src="images/portfolio/paris5.jpg" class="img-responsive" alt="this is a title">
+                        <div class="overlay">
+                            <div class="buttons">
+                                <a rel="gallery" class="fancybox" href="images/portfolio/paris5.jpg">Demo</a>
+                                <a target="_blank" href="single-portfolio.html">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>
+                        <h4>
+                            <a href="#">
+                                Dew Drop
+                            </a>
+                        </h4>
+                        <p>
+                            Redesigne UI Concept
+                        </p>
+                    </figcaption>
+                </figure>
             </div>
-            <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
-                    <img src="http://lorempicsum.com/rio/350/200/1" alt="...">
-                </a>
-            </div>
-            <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
-                    <img src="http://lorempicsum.com/rio/350/200/1" alt="...">
-                </a>
-            </div>
-            <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
-                    <img src="http://lorempicsum.com/rio/350/200/1" alt="...">
-                </a>
+            <div class="col-sm-4 col-xs-12">
+                <figure class="wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 300ms; animation-name: fadeInLeft;">
+                    <div class="img-wrapper">
+                        <img src="images/portfolio/resto3.jpg" class="img-responsive" alt="this is a title">
+                        <div class="overlay">
+                            <div class="buttons">
+                                <a rel="gallery" class="fancybox" href="images/portfolio/resto3.jpg">Demo</a>
+                                <a target="_blank" href="single-portfolio.html">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>
+                        <h4>
+                            <a href="#">
+                                Bottle Mockup
+                            </a>
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit.
+                        </p>
+                    </figcaption>
+                </figure>
             </div>
 
+
+            <div class="col-sm-4 col-xs-12">
+                <figure class="wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 300ms; animation-name: fadeInLeft;">
+                    <div class="img-wrapper">
+                        <img src="images/portfolio/vtc3.jpg" class="img-responsive" alt="">
+                        <div class="overlay">
+                            <div class="buttons">
+                                <a rel="gallery" class="fancybox" href="images/portfolio/vtc3.jpg">Demo</a>
+                                <a target="_blank" href="single-portfolio.html">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>
+                        <h4>
+                            <a href="#">
+                                Table Design
+                            </a>
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-sm-4 col-xs-12">
+                <figure class="wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 600ms; animation-name: fadeInLeft;">
+                    <div class="img-wrapper">
+                        <img src="images/portfolio/paris3.jpg" class="img-responsive" alt="">
+                        <div class="overlay">
+                            <div class="buttons">
+                                <a rel="gallery" class="fancybox" href="images/portfolio/paris3.jpg">Demo</a>
+                                <a target="_blank" href="single-portfolio.html">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>
+                        <h4>
+                            <a href="#">
+                                Make Up elements
+                            </a>
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor.
+                        </p>
+                    </figcaption>
+                </figure>
+
+
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <figure class="wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="900ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 900ms; animation-name: fadeInLeft;">
+                    <div class="img-wrapper">
+                        <img src="images/portfolio/bordeaux2.jpg" class="img-responsive" alt="">
+                        <div class="overlay">
+                            <div class="buttons">
+                                <a rel="gallery" class="fancybox" href="images/portfolio/bordeaux2.jpg">Demo</a>
+                                <a target="_blank" href="single-portfolio.html">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>
+                        <h4>
+                            <a href="#">
+                                Shoping Bag Concept
+                            </a>
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor.
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+                <figure class="wow fadeInLeft animated animated" data-wow-duration="500ms" data-wow-delay="1200ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 1200ms; animation-name: fadeInLeft;">
+                    <div class="img-wrapper">
+                        <img src="images/portfolio/nantes2.jpg" class="img-responsive" alt="">
+                        <div class="overlay">
+                            <div class="buttons">
+                                <a rel="gallery" class="fancybox" href="images/portfolio/nantes2.jpg">Demo</a>
+                                <a target="_blank" href="single-portfolio.html">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>
+                        <h4>
+                            <a href="#">
+                                Caramel Bottle
+                            </a>
+                        </h4>
+                        <p>
+                            Lorem ipsum dolor.
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
         </div>
     </div>
+</section>
 
-        <div class="container" >
+    <section id="call-to-action">
+        <div class="container">
             <div class="row">
-                <a href="" class="thumbnail">
-            <img src="http://lorempixel.com/1140/300/food/" alt="">
-                </a>
+                <div class="col-md-12">
+                    <div class="block">
+                        <h2 class="title wow fadeInDown animated" data-wow-delay=".3s" data-wow-duration="500ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 0.3s; animation-name: fadeInDown;">Découvrez notre application ! </h2>
+                        <p class="wow fadeInDown animated" data-wow-delay=".5s" data-wow-duration="500ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 0.5s; animation-name: fadeInDown;">Retrouvez tous les services de K&amp;E-Groupe sur notre application.<br>Disponible sur le Play Store et bientôt sur IOS.<br>
+                            Tous vos services préférés en une application.</p>
+                        <a href="https://play.google.com/store" target="_blank"><img id="play" src="images/ps.png" alt="play-store-button"> </a>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </section>
+    <section id="feature">
+        <div class="container">
+            <div class="section-heading">
+
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-lg-4 col-xs-12">
+                    <div class="media wow fadeInUp animated animated" data-wow-duration="500ms" data-wow-delay="300ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                        <div class="media-left">
+                            <div class="icon">
+                                <i class="fa fa-fast-forward"> </i>
+                            </div>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Un service ultra rapide</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xs-12">
+                    <div class="media wow fadeInDown animated animated" data-wow-duration="500ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 600ms; animation-name: fadeInDown;">
+                        <div class="media-left">
+                            <div class="icon">
+                                <i class="ion-ios-lightbulb-outline"></i>
+                            </div>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Simple d'utilisation</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 col-xs-12">
+                    <div class="media wow fadeInDown animated animated" data-wow-duration="500ms" data-wow-delay="900ms" style="visibility: visible; animation-duration: 500ms; animation-delay: 900ms; animation-name: fadeInDown;">
+                        <div class="media-left">
+                            <div class="icon">
+                                <i class="ion-ios-lightbulb-outline"></i>
+                            </div>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Entièrement sécurisé</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum, sint.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </section>
 
 
 {% endblock %}

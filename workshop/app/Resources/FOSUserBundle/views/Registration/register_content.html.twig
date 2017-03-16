@@ -1,8 +1,49 @@
 {% trans_default_domain 'FOSUserBundle' %}
+<section class="global-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h2>Inscrivez-vous !</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="{{ path('homepage') }}">
+                                <i class="ion-ios-home"></i>
+                                Accueil
+                            </a>
+                        </li>
 
-{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'registration.submit'|trans }}" />
+                    </ol>
+                </div>
+            </div>
+        </div>
     </div>
-{{ form_end(form) }}
+</section>
+<section id="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="block" >
+                    <h2 class="subtitle wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay=".3s" style="visibility: visible; animation-duration: 500ms; animation-delay: 0.3s; animation-name: fadeInDown;">Inscription</h2>
+                    <p class="subtitle-des wow fadeInDown animated" data-wow-duration="500ms" data-wow-delay=".5s" style="visibility: visible; animation-duration: 500ms; animation-delay: 0.5s; animation-name: fadeInDown;">
+                        Remplissez ce formulaire pour finaliser votre inscription à notre plateforme et profitez dès maintenant de nos services inédits !
+                    </p>
+                    <div class="contact-form">
+
+
+                            {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'contact-form'}}) }}
+                            {{ form_widget(form) }}
+                            <div>
+                                <input type="submit" value="{{ 'registration.submit'|trans }}" />
+                            </div>
+                            {{ form_end(form) }}
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div></div></section>

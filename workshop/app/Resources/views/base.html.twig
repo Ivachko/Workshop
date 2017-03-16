@@ -1,76 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <!-- Ionicons Fonts Css -->
+        <link rel="stylesheet" href="{{ asset('css/ionicons.min.css') }}">
+        <!-- animate css -->
+        <link rel="stylesheet" href="{{ asset('css/animate.css')}}">
+        <!-- Hero area slider css-->
+        <link rel="stylesheet" href="{{ asset('css/slider.css')}}">
+        <!-- owl craousel css -->
+        <link rel="stylesheet" href="{{ asset('css/owl.carousel.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/owl.theme.css')}}">
+        <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.css')}}">
+        <!-- template main css file -->
+        <link rel="stylesheet" href="{{ asset('css/main.css')}}">
+        <!-- responsive css -->
+        <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
+        <script src={{ asset('js/vendor/modernizr-2.6.2.min.js')}}></script>
+        <!-- jquery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <!-- owl carouserl js -->
+        <script src="{{ asset('js/owl.carousel.min.js')}}"></script>
+        <!-- bootstrap js -->
 
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <script
-        src="https://code.jquery.com/jquery-3.1.1.min.js"
-        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-        crossorigin="anonymous"></script>
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="{{asset('js/bootstrap.min.js')}}"></script>
+        <!-- wow js -->
+        <script src="{{asset('js/wow.min.js')}}"></script>
+        <!-- slider js -->
+        <script src="{{ asset('js/slider.js')}}"></script>
+        <script src="{{ asset('js/jquery.fancybox.js') }}"></script>
+        <!-- template main js -->
+        <script src="{{ asset('js/main.js') }}"></script>
+
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+    <header id="top-bar" class="navbar-fixed-top animated-header">
+        <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <!-- responsive nav button -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">K&N</a>
+                <!-- /responsive nav button -->
+
+                <!-- logo -->
+                <div class="navbar-brand">
+                    <a href="{{ path('homepage') }}" style="color: inherit;">
+                        <img src="{{ asset('images/logo4.png') }}">
+                    </a>
+                </div>
+                <!-- /logo -->
             </div>
+            <!-- main menu -->
+            <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                <div class="main-menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="{{ path("homepage") }}">Acceuil</a>
+                        </li>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ path("homepage") }}">Acceuil</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="{{ path("listRestaurant") }}">Restaurants</a></li>
-                    <li><a href="#">Evenements</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <span class="caret"></span></a>
+                            <div class="dropdown-menu">
+                                <ul>
+                                    <li><a href="activites.html">Activités inédites</a></li>
+                                    <li><a href="{{ path("listRestaurant") }}">Restaurants</a></li>
+                                </ul>
+                            </div>
+                        </li>
 
-                </ul>
-
-                <ul class="nav navbar-nav navbar-right">
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connexion / Inscription <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ path("fos_user_security_login") }}">Connexion</a></li>
-                            <li><a href="{{ path("fos_user_registration_register")}}">Inscription</a></li>
-
-                        </ul>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+                        <li><a href="{{ path('fos_user_security_login') }}">Connexion</a></li>
+                        <li><a href="{{ path('fos_user_registration_register') }}">Inscription</a></li>
 
 
-    <!--<div class="jumbotron">
-        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam, error expedita illo, mollitia perferendis perspiciatis reiciendis sed soluta tempore tenetur voluptate voluptatibus, voluptatum! Accusantium ad cum itaque. Cumque, temporibus?</span><span>Aspernatur facilis illo necessitatibus quae ullam voluptas! Amet assumenda culpa earum explicabo ipsa iusto necessitatibus quia, vel! Eveniet, possimus, quaerat. Ab accusamus culpa dolorum esse explicabo non nostrum officiis, sed.</span></p>
-        <a href="#" class="btn btn-primary">Je commence</a>
-    </div> -->
-
-            {% block body %}{% endblock %}
-
-    <header>
-        <hr>
-        <div class="container">
-            <div class="row">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores corporis earum explicabo impedit perspiciatis similique vitae. Aliquid assumenda dolorem dolores dolorum perspiciatis qui repellat sunt vel! Eos explicabo illo ut.</p>
-            </div>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- /main nav -->
         </div>
     </header>
+
+    {% block body %}{% endblock %}
+
+    <footer id="footer">
+        <div class="container">
+            <div class="col-md-8">
+                <p class="copyright">Tous droits réservés-K&amp;E Groupe <span>2017</span> . Made with <span class="fa fa-heart" aria-hidden="true"></span> by <a href="http://www.wis-ecoles.com/Campus/Nantes" target="_blank">Agence 2.7.0 (WIS-EPSI) Nantes</a></p>
+            </div>
+            <div class="col-md-4">
+                <!-- Social Media -->
+                <ul class="social">
+                    <li>
+                        <a href="http://wwww.fb.com/themefisher" class="Facebook">
+                            <i class="ion-social-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://wwww.twitter.com/themefisher" class="Twitter">
+                            <i class="ion-social-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="Linkedin">
+                            <i class="ion-social-linkedin"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
     </body>
 
 
