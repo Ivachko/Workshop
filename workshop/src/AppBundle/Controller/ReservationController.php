@@ -45,8 +45,8 @@ class ReservationController extends Controller
             $reservation->setUser($user);
             $em->persist($reservation);
             $em->flush();
-            $this->addFlash('Success','Reservation bien pris en cours add');
-            return $this->redirectToRoute("homepage");
+
+            return $this->render('@App/Reservation/payconfir.html.twig',['resa'=>$reservation]);
         }
         return $this->render("@App/Reservation/reserverrestaurant.html.twig",["form"=>$form->createView()]);
 
