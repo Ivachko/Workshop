@@ -51,4 +51,41 @@ class ReservationController extends Controller
         return $this->render("@App/Reservation/reserverrestaurant.html.twig",["form"=>$form->createView()]);
 
     }
+
+    /**
+     * @Route("/Reservation/activite-{nom}",name="activiteReservation")
+     */
+    public function  activiteReservationAction($nom,Request $request){
+        $em= $this->getDoctrine()->getEntityManager();
+
+        $activite=$em->getRepository("AppBundle:Activite")
+            ->findOneBy(['nom'=>$nom]);
+
+
+        return $this->render('@App/Reservation/activite.html.twig',['activite'=>$activite]);
+    }
+
+    /**
+     * @Route("/Reservation/activite/{id}",name="ReserverActvite")
+     * @param $id
+     */
+    public function reserverActiviteAction($id,Request $request){
+        $user = $this->getUser();
+
+        $reservation= new Reservation();
+        $form= $this->createForm(\AppBundle\Form\ReservationType::class,$reservation);
+        if($form->handleRequest($request)->isValid()){
+            $em= $this->getDoctrine()->getManager();
+            $activite=$em->getRepository("AppBundle:Activite")
+                ->find($id);
+            $reservation->setRestaurant($activite);
+            $reservation->setUser($user);
+            $em->persist($reservation);
+            $em->flush();
+
+            return $this->render('@App/Reservation/payconfir.html.twig',['resa'=>$reservation]);
+        }
+        return $this->render("@App/Reservation/reservactivite.html.twig",["form"=>$form->createView()]);
+
+    }
 }

@@ -103,7 +103,7 @@
                                     <img src="{{ item.Urlphoto}}" class="img-responsive" alt="">
                                     <div class="overlay">
                                         <div class="buttons">
-                                            <a rel="gallery" class="fancybox" href="Spa-noir.html">Réserver</a>
+                                            <a rel="gallery" class="fancybox" href="{{ path('activiteReservation',{'nom':item.nom}) }}">Réserver</a>
                                         </div>
                                     </div>
                                 </div>

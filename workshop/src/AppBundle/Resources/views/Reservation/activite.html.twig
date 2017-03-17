@@ -35,7 +35,7 @@
 
                 </p><p>
                     <i>
-                        Restaurant disponible à la réservation en ligne uniquement sur notre plateforme !
+                        Activite disponible à la réservation en ligne uniquement sur notre plateforme !
                     </i>
                 </p>
             </div>
@@ -43,48 +43,15 @@
             <!--end media-->
 
             <div class="post-comment">
-                <h3>Je réserve:</h3>
-                <form role="form" class="form-horizontal col-lg-12">
-                    <div class="form-group col-lg-5">
-                        <div class="col-lg-12">
-                            <input type="datetime-local" class="col-lg-12 form-control" placeholder="Date">
 
-
-                        </div>
-                        <div class="col-lg-12">
-                            <input type="number" class="col-lg-12 form-control" placeholder="Nombre de personne">
-                        </div>
-
-
-
-
-
-
-                        <div class="col-lg-12">
-                            <input type="text" class="col-lg-12 form-control" placeholder="Numéro de carte bleu">
-                        </div>
-                        <div class="col-lg-12">
-                            <input type="text" class="col-lg-12 form-control" placeholder="Cryptogramme">
-                        </div>
-                        <div class="col-lg-12">
-                            <input type="text" class="col-lg-12 form-control" placeholder="Date de validité">
-                        </div>
-
-
-
-
-                    </div>
-
-
-                </form>
                 <div>
                     <p>
 
-                        <button class="btn btn-send" type="submit"><span class="fa fa-credit-card-alt" aria-hidden="true"></span> Je paye</button>
+                        <a href="{{ path('ReserverActvite') }}"> Je paye<</a>
                     </p>
 
                     <p>
-                        <button class="btn btn-send" type="submit"><span class="fa fa-car" aria-hidden="true"></span> Commander un chauffeur</button>
+                        <a href="#" class="btn btn-primary" disabled="true"> Commander un chauffeur ( <i>a venir</i> )</a>
                     </p>
                 </div>
             </div>
