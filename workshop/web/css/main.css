@@ -1,8 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700);
 @import url(http://fonts.googleapis.com/css?family=Glegoo);
+@import url('https://fonts.googleapis.com/css?family=Questrial');
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Questrial', sans-serif;
 }
 h1,
 h2,
@@ -10,10 +11,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Questrial', sans-serif;
 }
 p {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Questrial', sans-serif;
   line-height: 22px;
   font-size: 16px;
   font-weight: 300;
@@ -32,7 +33,7 @@ a:hover {
 }
 .section-heading {
   text-align: center;
-  margin-bottom: 65px;
+  margin-bottom: 30px;
 }
 .section-heading p {
   font-size: 14px;
@@ -97,7 +98,7 @@ a:hover {
   padding: 15px 0;
   -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid #dedede;
+  border-bottom: 0px solid #dedede;
 }
 #top-bar .navbar-nav > li > a:hover {
   background: transparent;
@@ -140,7 +141,7 @@ a:hover {
   opacity: 0;
 }
 #hero-area {
-  background: url('../images/cover.png') no-repeat 50%;
+  background: url('../images/cover4.png') no-repeat 50%;
   background-size: cover;
   background-attachment: fixed;
   padding: 230px 0;
@@ -201,6 +202,7 @@ a:hover {
   text-align: center;
   position: relative;
   color: #fff;
+  
 }
 #call-to-action .block {
   position: relative;
@@ -253,7 +255,7 @@ a:hover {
   max-width: 100%;
 }
 .works {
-  padding: 80px 0;
+  padding: 0px 0;
   background: #FCFCFC;
 }
 .works .block {
@@ -362,9 +364,9 @@ figure .overlay:hover a {
   transform: scale3d(1, 1, 1);
 }
 figure .buttons {
-  position: absolute;
+  position: relative;
   top: 45%;
-  left: 24%;
+  /*left: 24%;*/
 }
 figure figcaption {
   padding: 20px 25px;
@@ -798,7 +800,7 @@ ul.social-icons li {
 }
 .wrapper_404 h1 {
   font-size: 200px;
-  color: #02bdd5;
+  color: white;
   line-height: 1;
 }
 .wrapper_404 h2 {
@@ -996,7 +998,7 @@ article {
   padding: 100px;
 }
 .gallery figure .buttons {
-  left: 40%;
+  /*left: 40%;*/
 }
 .portfolio-meta span {
   margin: 5px 10px;
